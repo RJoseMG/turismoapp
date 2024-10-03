@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Registro</title>
+    <link href="~/Styles/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style>
+        #map {
+            height: 180px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="Titulo">Registro de Proyectos</div>
+        <div class="Subtitulo">Datos del Proyecto</div>
+        <table style="width: 100%">
+            <tr>
+                <td style="width: 70%">
+                    <table>
+                        <tr>
+                            <td style="width: 30%">Nombre del Proyecto</td>
+                            <td style="width: 30%">Tipo de Proyecto</td>
+                            <td style="width: 30%">Monto</td>
+                            <td style="width: 10%"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input id="hdfIdProyecto" type="hidden" class="G"/>
+                                <input id="txtNombre" type="text" style="width: 300px" maxlength="100" class="G R"/>
+                            </td>
+                            <td><select id="cboTipo" style="width: 300px" class="G R"></select></td>
+                            <td><input id="txtMonto" type="text" style="width: 100px" maxlength="10" class="G R"/></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Departamento</td>
+                            <td>Provincia</td>
+                            <td>Distrito</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><select id="cboDepartamento" style="width: 300px" class="R"></select></td>
+                            <td><select id="cboProvincia" style="width: 300px" class="R"></select></td>
+                            <td><select id="cboDistrito" style="width: 300px" class="R"></select></td>
+                            <td><input id="hdfIdUbigeo" type="hidden" class="G"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <input id="txtUbicacion" type="text" style="width: 600px" readonly="readonly" class="G R"/>
+                                <button id="btnVerMapa" class="BotonL">Ver Mapa</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div id="divMapa" style="background-color: white; width: 1200px; height: 400px">&nbsp;</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="Centro">
+                                <button id="btnRegistrar" class="BotonL">Registrar Proyecto</button>
+                                <button id="btnNuevo" class="BotonL">Nuevo Proyecto</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" class="Centro">
+                                <span id="spnValida" class="Mensaje"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td id="tblArchivo" style="width: 30%; vertical-align: top; display: none">
+                    <table>
+                        <tr>
+                            <td>
+                                Selecciona los archivos a subir: <button id="btnAbrir" class="BotonL">Abrir Archivos</button>
+                                <input id="fupArchivo" type="file" multiple style="display: none"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="divArchivo"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="Centro">
+                                <button id="btnSubir" class="BotonL">Subir Archivos</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="Centro">
+                                Progreso Archivo: <span id="spnProgresoArchivo"></span>
+                                <progress id="pbrArchivo" style="width: 500px" value="0"></progress>
+                                <br/>
+                                Progreso Total: <span id="spnProgresoTotal"></span>
+                                <progress id="pbrTotal" style="width: 500px" value="0"></progress>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    <input id="hdfRaiz" type="hidden" value='@Url.Content("~")' />
+    <script src="~/Scripts/General.js"></script>
+    <script src="~/Scripts/Registro.js"></script>
+</body>
+</html>

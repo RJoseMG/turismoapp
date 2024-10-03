@@ -1,0 +1,295 @@
+﻿body {
+    background-color:lightblue;
+}
+.Titulo{
+    background-color:black;
+    color:white;
+    font-size:x-large;
+}
+.Subtitulo {
+    background-color: white;
+    color: black;
+    font-size: large;
+}
+.Mensaje{
+    font-weight:bold;
+    color:red;
+}
+.Boton {
+    width: 100px;
+    background: #409fff;
+    border: 1px solid #409fff;
+    border-radius: 1.25em;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: 500;
+    height: 2.5em;
+    transition: border-color .2s cubic-bezier(.77,0,.175,1),background-color .2s cubic-bezier(.77,0,.175,1),color .2s cubic-bezier(.77,0,.175,1);
+}
+
+    .Boton:hover {
+        cursor: pointer;
+        background: white;
+        color: blue;
+    }
+
+.BotonSeleccionado {
+    width: 100px;
+    background: black;
+    color: white;
+    border: 1px solid #409fff;
+    border-radius: 1.25em;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: 500;
+    height: 2.5em;
+    transition: border-color .2s cubic-bezier(.77,0,.175,1),background-color .2s cubic-bezier(.77,0,.175,1),color .2s cubic-bezier(.77,0,.175,1);
+}
+
+.BotonSeleccion {
+    width: 30px;
+    background: #409fff;
+    border: 1px solid #409fff;
+    border-radius: 1.25em;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: 500;
+    height: 2em;
+    transition: border-color .2s cubic-bezier(.77,0,.175,1),background-color .2s cubic-bezier(.77,0,.175,1),color .2s cubic-bezier(.77,0,.175,1);
+}
+.Tabla{
+    width:100%;
+}
+
+.FilaCabecera {
+    color: white;
+    font-weight: normal;
+    font-size: 11px;
+    background-image: linear-gradient(rgb(196, 3, 7) 0%, rgb(153, 3, 5) 44%, rgb(119, 3, 0) 100%);
+}
+
+.FilaSeleccionada {
+    color: white;
+    font-weight: normal;
+    font-size: 11px;
+    background-color: lightcoral;
+}
+
+.FilaDatos {
+    background-color: white;
+    color: #363636;
+    font-weight: normal;
+    font-size: 11px;
+    background-image: none;
+    cursor: pointer;
+}
+
+    .FilaDatos:hover {
+        color: white;
+        font-weight: normal;
+        font-size: 11px;
+        background-image: linear-gradient(rgb(196, 3, 7) 0%, rgb(153, 3, 5) 44%, rgb(119, 3, 0) 100%);
+    }
+
+.BotonGrilla {
+    width: 90px;
+    background: #409fff;
+    border: 1px solid #409fff;
+    border-radius: 1.25em;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: 500;
+    height: 2em;
+    transition: border-color .2s cubic-bezier(.77,0,.175,1),background-color .2s cubic-bezier(.77,0,.175,1),color .2s cubic-bezier(.77,0,.175,1);
+}
+
+    .BotonGrilla:hover {
+        cursor: pointer;
+        background: white;
+        color: blue;
+    }
+
+.Panel{
+    border-radius:5%;
+    width:1000px;
+    height:500px;
+    background-color:white;
+    overflow-y:auto;
+}
+
+.Fila{
+    clear:left;
+    padding:10px;
+}
+.Ancho5 {
+    float: left;
+    width: 10%;
+}
+.Ancho10{
+    float:left;
+    width:10%;
+}
+.Ancho20 {
+    float: left;
+    width: 20%;
+}
+.Ancho40 {
+    float: left;
+    width: 20%;
+}
+.Ancho80 {
+    float: left;
+    width: 80%;
+}
+.Izquierda {
+    text-align: left;
+}
+.Derecha{
+    text-align:right;
+}
+.Centro {
+    text-align: center;
+}
+.Cabecera{
+    width:90%;
+}
+
+.BotonL {
+    width: 150px;
+    background: #409fff;
+    border: 1px solid #409fff;
+    border-radius: 1.25em;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: 500;
+    height: 2.5em;
+    transition: border-color .2s cubic-bezier(.77,0,.175,1),background-color .2s cubic-bezier(.77,0,.175,1),color .2s cubic-bezier(.77,0,.175,1);
+}
+
+    .BotonL:hover {
+        cursor: pointer;
+        background: white;
+        color: blue;
+    }
+
+.Enlace{
+    color:blue;
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+.Pagina {
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    color: white;
+    font-weight: normal;
+    font-size: 11px;
+    background-image: linear-gradient(rgb(196, 3, 7) 0%, rgb(153, 3, 5) 44%, rgb(119, 3, 0) 100%);
+}
+
+    .Pagina:Hover {
+        background: white;
+        color: darkred;
+        cursor:pointer;
+    }
+.PaginaSeleccionada {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-weight: normal;
+    font-size: 11px;
+    color: rgb(196, 3, 7);
+    background: white;
+}
+
+/*Estilos para el Popup*/
+.PopupContainer {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.PopupWindow {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    width: 60%;
+    height: 60%;
+    background-color: white;
+    border-color: #f35800;
+    border-style: solid;
+    border-width: medium;
+}
+
+.BarraTitulo {
+    height: 30px;
+    background-image: none,linear-gradient(to bottom,rgba(255,255,255,.15) 0,rgba(255,255,255,0) 100%);
+    background-color: #f35800;
+    border-color: #f85a00;
+    color: white;
+}
+
+.Icono {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.IconoMedio {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.Cuerpo {
+    padding: 20px;
+}
+
+.Marco {
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 10%;
+}
+
+.Imagen {
+    width: 120px;
+    height: 100px;
+}
+
+
+.MarcoImagen1 {
+    float: left;
+    width: 200px;
+    height: 140px;
+    padding: 20px;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 10%;
+}
+
+.MarcoImagen2 {
+    float: left;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 10%;
+}
+
+    .MarcoImagen1:hover, .MarcoImagen2:hover {
+        border-style: solid;
+        border-color: red;
+        background-color: yellow;
+        cursor: pointer;
+    }

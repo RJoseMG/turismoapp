@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Styles/CursoMJ.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div class="Titulo">Aplicacion Web de Monitoreo de Asistencias</div>
+        <div class="Marco">
+            <div class="Subtitulo">Login del Sistema</div>
+            <div>Ingresa el Usuario:</div>
+            <div><input id="txtUsuario" type="text" style="width:200px" maxlength="20" class="R"/></div>
+            <div>Ingresa la Clave:</div>
+            <div><input id="txtClave" type="password" style="width:100px" maxlength="10" class="R"/></div>
+            <div>
+                <img id="imgCaptcha" width="220" height="80" />
+            </div>
+            <div>
+                <span id="spnActualizarCaptcha" class="Enlace">Actualizar Captcha</span>
+            </div>
+            <div>Ingresa Codigo Generado:</div>
+            <div>
+                <input id="txtCodigo" type="text" style="width:60px" maxlength="6" class="" />
+                &nbsp;&nbsp;
+                <input id="btnAceptar" type="button" value="Aceptar" class="Boton" />
+            </div>
+            <div><span id="spnValida"></span></div>
+        </div>
+    </div>
+    <input id="hdfRaiz" type="hidden" value='@Url.Content("~")' />
+    <input id="hdfToken" type="hidden" value="@ViewBag.Token" />
+    <script src="~/Scripts/General.js"></script>
+    <script src="~/Scripts/sha256.js"></script>
+    <script src="~/Scripts/Login.js"></script>
+</body>
+</html>
